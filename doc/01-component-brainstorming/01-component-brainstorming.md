@@ -1,8 +1,8 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Jake Ganjeizadeh**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
+- **ganjeizadeh.3**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
+- **2/4/25 @ 12:40 PM EST**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
 
 ## Assignment Overview
 
@@ -29,8 +29,6 @@ implement.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
-
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
 opening the TODOs window from the sidebar. The icon looks like a tree and will
@@ -52,7 +50,6 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-<!-- TODO: read the assignment learning objectives then delete this comment -->
 
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
@@ -66,8 +63,6 @@ project. Specifically, students should be able to:
    discipline
 
 ## Assignment Rubric: 10 Points
-
-<!-- TODO: read the assignment rubric then delete this comment -->
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -106,23 +101,16 @@ Below is further rationale/explanation for the rubric items above:
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-<!-- TODO: briefly talk about your interests then delete this comment.
-Also, protip: you can preview what your response looks like by hitting
-the magnifying glass icon in the upper-right corner or pressing CTRL+K and
-then V. This kind of button combination is called a chord, for whatever
-reason -->
+
+In my career right now I would like to design electrical components more specifically computer hardware, however this is very subject to change as I get into different co-ops and experience different sides of the field. As far as hobbies I play club lacrosse here, like to ski, and I really enjoy listening to music.
 
 ## Assignment
-
-<!-- TODO: read the assignment section then delete this comment -->
 
 As previously stated, you are tasked with brainstorming 3 possible components.
 To aid you in this process, we have provided [some example components][example-components]
 that may help you in your brainstorming. All of these components were made at
 some point by one of your peers, so you should feel confident that you can
 accomplish any of them.
-
-<!-- TODO: browse the list of possible projects then delete this comment -->
 
 There is no requirement that you use any of the components listed above.
 If you want to model something else, go for it! Very common early object
@@ -131,8 +119,6 @@ etc. Make of this whatever seems interesting to you, and keep in mind that
 you're just brainstorming right now. You do not have to commit to anything.
 
 ### Example Component
-
-<!-- TODO: review this example component then delete this comment -->
 
 To help you brainstorm a few components, we've provided an example below of a
 component you already know well: NaturalNumber. We highly recommend that you
@@ -200,68 +186,86 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
+- Component Design #1: ShuffleablePlaylist
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - The purpose of this component is to model a music playlist that has a shuffle feature. I will accomplish this with a more complex kernel which provides most of the functionality enhanced by a couple secondary methods
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
-  - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
-  - **Additional Considerations** (*note*: "I don't know" is an acceptable
-    answer for each of the following questions):
-    - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
-      Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component need any enums or constants (e.g.,
-      `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Can you implement your secondary methods using your kernel methods?
-      Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
-  - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
-  - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `void add(String x)` Adds `x` to `this`.
+    - `boolean contains(String x)` Reports whether `x` is in this.
+    - `String remove(String x)` Removes `x` from `this`, and returns it.
+    - `String removeAny()` Removes and returns an arbitrary element from `this`.
+    - `int size()` reports size (cardinality) of this.
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `void add(Set<String> s)` Adds to `this` all elements of `s` that are not already in `this`, also removing just those elements from `s`.
+    - `boolean isSubset(Set<String> s)` reports whether `this` is a subset of `s`.
+    - `Set<String> remove(Set<String> s)` Removes from `this` all elements of `s` that are also in `this`, leaving `s` unchanged, and returns the elements actually removed.
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, because it will inherit `clear`, `newInstance`, and `transferFrom` from standard.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, I would probably use Sequence to represent the set because it can change length.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I dont know.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, for example we can use `String remove(String x)` to implement `Set<String> remove(Set<String> s)`.
 
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
+- Component Design #2: StudentID
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - The purpose of this component is to store data that contains different students first name, last name, ID#, and a path to a photo for a class roster. It will be modeled off a sequence of arrays with each array ordered by ID# least to greatest. It will use a basic kernel with complex secondary methods.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `void add(int pos, String[] x )` Adds the entry x at position `pos` of this.
+    - `int length()` Reports the length of `this`.
+    - `String[] x remove(int pos)` Removes and returns the entry at position `pos` of `this`.
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `void append(Sequence<String[]> s)` Concatenates ("appends") `s` to the end of `this`.
+    - `String[] entry(int pos)` Reports the entry at `pos` of `this`.
+    - `void insert(int pos, Sequence<String[]> s)` Inserts `s` into `this` at position `pos`, i.e., after the `pos`-th entry of `this`; and clears `s`.
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes because it will inherit `clear`, `newInstance`, and `transferFrom` from standard.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - No, because it will represent each element as an array of strings.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I dont know
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, for example insert can be implemented using add, remove, and length.
+
+- Component Design #3: liftingTracker
+  - **Description**:
+    - The purpose of this component is the track what has been done in a workout by tracking each exercise name, sets, and reps. I will represent this as a `Map<String, Int[]>` with the integer array being length 2 the first element containing number of sets, and the second element containing number of reps. It will have a complex kernal with a light secondary implementation.
+  - **Kernel Methods**:
+    - `void add(String key, Int[] value)` Adds the pair `(key, value)` to this.
+    - `boolean hasKey(String key)` Reports whether there is a pair in `this` whose first component is `key`.
+    - `Map.Pair<String, Int[]> remove(String key)` Removes the pair whose first component is `key` and returns it.
+    - `Map.Pair<String, Int[]> removeAny()` Removes and returns an arbitrary pair from `this`.
+    - `int size()` Reports size of `this`.
+    - `Int[] value(String key)` Reports the value associated with `key` in `this`.
+  - **Secondary Methods**:
+    - `boolean hasValue(Int[] value)` Reports whether there is a pair in `this` whose second component is `value`.
+    - `String key(Int[] value)` Reports a key associated with `value` in `this`.
+    - `Int[] replaceValue(String key, Int[] value)` Replaces the value associated with `key` in `this` with `value` and returns the old value.
+  - **Additional Considerations** (*note*: "I don't know" is an acceptable
+    answer for each of the following questions):
+    - Would this component be mutable? Answer and explain:
+      - Yes, because it inherits clear, newInstance, and transferFrom from secondary.
+    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
+      Answer and explain:
+      - Yes, it will rely on Map.Pair to represent the map properly.
+    - Would this component need any enums or constants (e.g.,
+      `Program.Instruction`)? Answer and explain:
+      - I dont know
+    - Can you implement your secondary methods using your kernel methods?
+      Answer, explain, and give at least one example:
+      - Yes, for example I can implement hasValue using removeAny and add.
 
 ## Post-Assignment
 
@@ -269,8 +273,6 @@ The following sections detail everything that you should do once you've
 completed the assignment.
 
 ### Changelog
-
-<!-- TODO: create CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -292,9 +294,9 @@ the following form: YYYY.0M.0D.
 
 ### Added
 
-- Designed a <!-- insert name of component 1 here --> component
-- Designed a <!-- insert name of component 2 here --> component
-- Designed a <!-- insert name of component 3 here --> component
+- Designed a <ShuffleablePlaylist> component
+- Designed a <StudentID> component
+- Designed a <liftingTracker> component
 ```
 
 Here `YYYY.MM.DD` would be the date of your submission, such as 2024.04.21.
@@ -309,8 +311,6 @@ of development.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
-
 If you have completed the assignment using this template, we recommend that
 you convert it to a PDF before submission. If you're not sure how, check out
 this [Markdown to PDF guide][markdown-to-pdf-guide]. However, PDFs should be
@@ -319,11 +319,8 @@ all your work is there before submitting. For future assignments, you will
 just be submitting a link to a pull request. This will be the only time
 you have to submit any PDFs.
 
-<!-- TODO: upload a PDF of this document and the CHANGELOG to Carmen then delete this comment -->
-
 ### Peer Review
 
-<!-- TODO: review the peer review guidelines then delete this comment -->
 
 Following the completion of this assignment, you will be assigned three
 students' component brainstorming assignments for review. Your job during the
