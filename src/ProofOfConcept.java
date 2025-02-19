@@ -47,10 +47,8 @@ public class ProofOfConcept {
     public static void main(String args[]) {
         Sequence<String> playlistA = new Sequence1L<>();
         Sequence<String> playlistB = new Sequence1L<>();
-        Sequence<String> testA = new Sequence1L();
-        Sequence<String> testB = new Sequence1L();
-
-
+        Sequence<String> testA = new Sequence1L<>();
+        Sequence<String> testB = new Sequence1L<>();
 
         SimpleWriter out = new SimpleWriter1L();
 
@@ -59,7 +57,7 @@ public class ProofOfConcept {
         add(playlistB, "y");
         add(playlistB, "z");
         testB.add(0, "y");
-        testB.add(0, "z");
+        testB.add(1, "z");
 
         if (playlistA.equals(testA)) {
             out.println("add() Test 1 Passed");
@@ -73,8 +71,8 @@ public class ProofOfConcept {
             out.println("add() Test 2 Failed");
         }
 
-        String raT1 = removeAny(playlistA);
-        String raT2 = removeAny(playlistB);
+        removeAny(playlistA);
+        removeAny(playlistB);
 
         if (playlistA.length() == 0) {
             out.println("removeAny() Test 1 Passed");
@@ -100,32 +98,76 @@ public class ProofOfConcept {
             out.println("size() Test 2 Failed");
         }
 
-
         playlistA.clear();
         testA.clear();
         playlistB.clear();
         testB.clear();
 
-        playlistB.add(0,"a");
-        testA.add(0,"a");
+        playlistB.add(0, "a");
+        testA.add(1, "a");
 
         add(playlistA, playlistB);
 
         if (playlistA.equals(testA)) {
-            out.println("add() Test1 Passed");
+            out.println("add() other playlist Test1 Passed");
         } else {
-            out.println("add() Test1 Failed")
+            out.println("add() other playlist Test1 Failed");
+        }
+
+        playlistA.clear();
+        playlistB.clear();
+        testA.clear();
+
+        playlistA.add(0, "a");
+        playlistA.add(1, "b");
+
+        playlistB.add(0, "c");
+
+        testA.add(0, "a");
+        testA.add(1, "b");
+        testA.add(2, "c");
+
+        add(playlistA, playlistB);
+
+        if (playlistA.equals(testA)) {
+            out.println("add() other playlist Test2 Passed");
+        } else {
+            out.println("add() other playlist Test2 Failed");
         }
 
         playlistA.clear();
         playlistB.clear();
 
-        playlistA.add(0,"a");
-        playlistA.add(0,"b");
+        playlistA.add(0, "a");
+        playlistA.add(1, "b");
 
-        playlistB.add(0,"")
+        playlistB.add(0, "a");
 
+        if (isSubPlaylist(playlistA, playlistB)) {
+            out.println("isSubPlaylist() Test1 Passed");
+        } else {
+            out.println("is SubPlaylist() Test1 Failed");
+        }
 
+        playlistA.clear();
+        playlistB.clear();
 
+        playlistA.add(0, "a");
+        playlistA.add(1, "b");
+
+        playlistB.add(0, "c");
+
+        if (!isSubPlaylist(playlistA, playlistB)) {
+            out.println("isSubPlaylist() Test1 Passed");
+        } else {
+            out.println("is SubPlaylist() Test1 Failed");
+        }
+
+        playlistA.clear();
+        playlistB.clear();
+        testA.clear();
+        testB.clear();
+
+        out.close();
     }
 }
