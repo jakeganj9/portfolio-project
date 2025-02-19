@@ -197,9 +197,9 @@ will likely refine your design to make your implementation easier to use.
     - `String removeAny()` Removes and returns an arbitrary element from `this`.
     - `int size()` reports size (cardinality) of this.
   - **Secondary Methods**:
-    - `void add(Set<String> s)` Adds to `this` all elements of `s` that are not already in `this`, also removing just those elements from `s`.
-    - `boolean isSubset(Set<String> s)` reports whether `this` is a subset of `s`.
-    - `Set<String> remove(Set<String> s)` Removes from `this` all elements of `s` that are also in `this`, leaving `s` unchanged, and returns the elements actually removed.
+    - `void add(ShuffleablePlaylist<String> s)` Adds to `this` all elements of `s` that are not already in `this`, also removing just those elements from `s`.
+    - `boolean isSubPlaylist(ShuffleablePlaylist<String> s)` reports whether `this` is a subset of `s`.
+    - `Set<String> remove(ShuffleablePlaylist<String> s)` Removes from `this` all elements of `s` that are also in `this`, leaving `s` unchanged, and returns the elements actually removed.
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
