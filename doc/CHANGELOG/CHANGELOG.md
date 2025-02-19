@@ -26,7 +26,7 @@ the following form: YYYY.0M.0D.
 ## [2025.02.19]
 
 ### Added
-- Created `ProofOfConcept.java`
+- Designed a proof of concept for `Playlist` component
 - Designed public static void add(Sequence<String> playlist1, String song)
 - Designed public static String removeAny(Sequence<String> playlist1)
 - Designed public static int size (Sequence<String> playlist1)
