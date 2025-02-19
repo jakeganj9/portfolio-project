@@ -118,7 +118,6 @@ I am choosing to implement the ShuffleablePlaylist component I described. I chos
 > your changes.
 
 
-
 ## Assignment Tasks
 
 As stated previously, your goal with this assignment is to produce a Java
@@ -143,8 +142,6 @@ The following sections detail everything that you should do once you've
 completed the assignment.
 
 ### Changelog
-
-<!-- TODO: update CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
